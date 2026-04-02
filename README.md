@@ -2,6 +2,9 @@
 
 `Simple Auth UI` is an Angular 15 frontend used to demonstrate a simple social authentication flow with Google.
 
+![Animation](https://github.com/user-attachments/assets/bd374223-0e7a-4dd5-978e-3888d1160d8e)
+
+
 The application redirects the user to a backend authentication API, receives the authentication result on a callback route, stores the returned token and user information in `localStorage`, and then moves the user to a success screen.
 
 ## Overview
