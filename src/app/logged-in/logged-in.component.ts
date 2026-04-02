@@ -19,4 +19,9 @@ export class LoggedInComponent implements OnInit {
       },
     });
   }
+  logout(): void {
+    localStorage.clear();
+
+    window.location.href = 'https://localhost:5001/auth/logout';
+  }
 }
