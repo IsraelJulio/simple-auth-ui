@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -8,8 +9,8 @@ import { Component } from '@angular/core';
 export class HomeComponent {
   loginWithGoogle(): void {
     const returnUrl = encodeURIComponent(
-      window.location.origin + '/auth/social-callback',
+      window.location.origin + environment.endpoints.socialCallbackPath,
     );
-    window.location.href = `https://localhost:5001/auth/google/login?returnUrl=${returnUrl}`;
+    window.location.href = `${environment.apiBaseUrl}${environment.endpoints.authGoogleLogin}?returnUrl=${returnUrl}`;
   }
 }

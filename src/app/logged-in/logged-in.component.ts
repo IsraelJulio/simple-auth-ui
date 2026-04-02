@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-logged-in',
@@ -22,6 +23,6 @@ export class LoggedInComponent implements OnInit {
   logout(): void {
     localStorage.clear();
 
-    window.location.href = 'https://localhost:5001/auth/logout';
+    window.location.href = `${environment.apiBaseUrl}${environment.endpoints.authLogout}`;
   }
 }
